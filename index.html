@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="kk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1726">
+  <meta name="description" content="Информатика терминдерінің қазақша нұсқалары мен басқа тілдердегі қолданысын дереккөзбен салыстырыңыз.">
+  <title>Термин зертханасы — информатика терминдерін талдау</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./catalog.js" defer></script>
+  <script src="./catalog-user.js" defer></script>
+  <script src="./core.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Негізгі мазмұнға өту</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="./" aria-label="Термин зертханасы"><span class="brand-mark" aria-hidden="true">Т<span>.</span></span><span>ТЕРМИН<span class="brand-light">ЗЕРТХАНАСЫ</span></span></a>
+      <nav class="header-nav" aria-label="Негізгі навигация"><a href="#catalogue">Каталог</a><a href="#method">Дереккөздер</a><span class="version">ЗЕРТТЕУ ҚҰРАЛЫ / 02</span></nav>
+    </div>
+  </header>
+
+  <main id="main" class="shell">
+    <section class="intro" aria-labelledby="page-title">
+      <div class="eyebrow"><span></span> ИНФОРМАТИКА ТЕРМИНДЕРІ</div>
+      <h1 id="page-title">Қай атауды <em>қолданған дұрыс?</em></h1>
+      <p>Қазақша баламалардың дереккөздегі қолданысын көріңіз. Басқа елдерге қатысты тілдердегі атауларды салыстырып, ұсыныстың себебін ашыңыз.</p>
+    </section>
+
+    <section class="search-panel" aria-label="Термин іздеу">
+      <form id="search-form" class="search-form">
+        <label for="term-input">ҚАЗАҚША, ОРЫСША НЕМЕСЕ АҒЫЛШЫНША ТЕРМИН</label>
+        <div class="search-row">
+          <svg class="search-icon" width="23" height="23" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.8" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <input id="term-input" type="search" maxlength="100" placeholder="Мысалы: жесткий диск, деректер қоры, machine learning" autocomplete="off" required>
+          <button type="submit" class="primary-button">Іздеу</button>
+        </div>
+      </form>
+      <div class="examples"><span>ЖЫЛДАМ ТАҢДАУ</span><button type="button" data-pick="hdd">Жесткий диск</button><button type="button" data-pick="mouse">Тінтуір</button><button type="button" data-pick="database">Деректер қоры</button><button type="button" data-pick="artificial-intelligence">Жасанды интеллект</button></div>
+    </section>
+
+    <section id="lookup" class="lookup" hidden aria-labelledby="lookup-title">
+      <div class="lookup-head"><div><span class="section-kicker">КАТАЛОГТАН ТЫС ІЗДЕУ</span><h2 id="lookup-title">Ұғымды нақтылаңыз</h2></div><button id="close-lookup" type="button" class="text-button">Жабу</button></div>
+      <p id="lookup-status" role="status" aria-live="polite"></p><div id="lookup-options" class="lookup-options"></div>
+      <button id="manual-button" type="button" class="outline-button">Баламаларды өзім енгіземін</button>
+    </section>
+
+    <section id="editor" class="editor" hidden aria-labelledby="editor-title">
+      <div class="editor-head"><div><span class="section-kicker">БАЛАМАЛАРДЫ ТЕКСЕРУ</span><h2 id="editor-title">Салыстырылатын атаулар</h2></div><button id="close-editor" type="button" class="text-button">Жабу</button></div>
+      <p>Бір ұғымға қатысты нұсқаларды үтірмен бөліңіз. Басқа тілдегі атаулар Wikipedia-дағы сол ұғымға байланысқан мақаладан алынса да, талдау алдында түзете аласыз.</p>
+      <form id="variants-form">
+        <div class="editor-grid">
+          <label>Қазақша атаулар <span>міндетті</span><input id="variants-kk" required placeholder="қатқыл диск, қатты диск"></label>
+          <label>Ағылшынша ұғым атауы <span>АҚШ</span><input id="variants-en" placeholder="hard disk drive"></label>
+          <label>Неміс тілі <span>Германия</span><input id="variants-de" placeholder="Festplatte"></label>
+          <label>Қытай тілі <span>Қытай</span><input id="variants-zh" placeholder="硬盘"></label>
+          <label>Корей тілі <span>Оңтүстік Корея</span><input id="variants-ko" placeholder="하드 디스크 드라이브"></label>
+          <label>Индонез тілі <span>Индонезия</span><input id="variants-id" placeholder="cakram keras"></label>
+          <label>Малай тілі <span>Малайзия</span><input id="variants-ms" placeholder="cakera keras"></label>
+        </div>
+        <div class="editor-actions"><p id="editor-error" role="alert"></p><button type="submit" class="secondary-button">Салыстыруды бастау</button></div>
+      </form>
+    </section>
+
+    <div id="catalogue" class="workspace">
+      <aside class="catalog-panel" aria-labelledby="catalog-title">
+        <div class="catalog-head"><div><span class="section-kicker">ҰҒЫМДАР ТІЗІМІ</span><h2 id="catalog-title">Каталог</h2></div><span id="catalog-count" class="count-pill">…</span></div>
+        <p class="catalog-note">Қазақша атаулар — тексерілетін бастапқы нұсқалар. Ресми мәртебе әр жазбада бөлек көрсетіледі.</p>
+        <div id="category-list" class="category-list" aria-label="Сала сүзгісі"></div>
+        <div class="list-heading"><span id="list-count"></span><button id="clear-filter" type="button" class="text-button" hidden>Сүзгіні тазалау</button></div>
+        <div id="term-list" class="term-list"></div>
+        <button id="show-more" type="button" class="show-more" hidden>Тағы терминдер</button>
+        <div class="catalog-import"><label for="csv-import">Өз тізіміңізді қосу <span>(CSV)</span></label><input id="csv-import" type="file" accept=".csv,text/csv"><a href="./example-import.csv" download>CSV үлгісін жүктеу</a><p id="import-status" role="status"></p></div>
+      </aside>
+
+      <section class="results" aria-labelledby="results-title">
+        <div class="results-heading"><div><span class="section-kicker">ТАҢДАЛҒАН ҰҒЫМ</span><h2 id="results-title">Қатқыл диск</h2><div id="result-subtitle" class="result-subtitle"></div></div><div class="results-controls"><button id="edit-button" class="outline-button" type="button">Атауларды түзету</button><button id="refresh-button" class="icon-button" type="button" aria-label="Қайта тексеру" title="Қайта тексеру"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 11a8 8 0 1 0-1.8 5.1M20 5v6h-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div>
+        <div class="source-strip"><span id="status" role="status" aria-live="polite">Тексеріліп жатыр…</span><span id="result-date"></span></div>
+        <div class="result-grid">
+          <article class="panel recommendation-panel" aria-labelledby="recommend-title"><div class="panel-title"><span class="panel-index">01 / ҰСЫНЫС</span><span id="confidence" class="confidence">ДЕРЕК ТЕКСЕРІЛУДЕ</span></div><h3 id="recommend-title">Қолдануға ұсынылатын атау</h3><div id="recommend-body" class="recommend-body"></div><div id="recommend-source" class="recommend-source"></div></article>
+          <article class="panel kazakh-panel" aria-labelledby="kk-title"><div class="panel-title"><span class="panel-index">02 / ҚАЗАҚ ТІЛІ</span><span class="source-badge">kk.wikipedia.org</span></div><h3 id="kk-title">Қазақша баламалар</h3><p class="panel-description">Тіркес кездесетін мақала саны · әр нұсқа жеке ізделеді</p><div id="kazakh-list" class="variant-list"></div></article>
+        </div>
+        <article id="web-panel" class="web-panel" hidden aria-labelledby="web-title"><div><span class="section-kicker">ҚОСЫМША ВЕБ ДЕРЕК</span><h3 id="web-title">Google нәтижелерінің шамасы</h3><p>Бұл Google беретін бағалау саны, нақты сөз қайталануы емес. Ол төмендегі Wikipedia мақалалары санымен қосылмайды.</p></div><div id="web-data" class="web-data"></div><span id="web-date" class="web-date"></span></article>
+        <div class="region-heading"><div><span class="section-kicker">ХАЛЫҚАРАЛЫҚ ШОЛУ</span><h2>Басқа елдердегі атаулар</h2></div><p>Ел атауы жанындағы тілдің Wikipedia мәтіндері ғана есептеледі. Елдердің абсолют сандарын өзара салыстырмаңыз.</p></div>
+        <div id="country-grid" class="country-grid"></div>
+        <div id="cross-language" class="cross-language" aria-live="polite"></div>
+        <div class="verification-links"><a id="termincom-link" href="https://termincom.kz/termins" target="_blank" rel="noopener noreferrer">Termincom-нан ресми атауды тексеру ↗</a><a id="wikidata-link" href="https://www.wikidata.org/" target="_blank" rel="noopener noreferrer" hidden>Ұғым байланысын көру ↗</a></div>
+      </section>
+    </div>
+
+    <section id="method" class="method" aria-labelledby="method-title"><div><span class="section-kicker">ӘДІСТЕМЕ</span><h2 id="method-title">Бұл статистика нені өлшейді?</h2></div><div class="method-body"><p><strong>Мәтін көзі:</strong> әр тілдегі Wikipedia. API тырнақшаға алынған тіркесті негізгі мақалалардан іздеп, нәтижедегі мақалалар санын береді. Бұл барлық интернеттегі сөз қайталану саны емес. Бір мақала бірнеше нұсқада есептелуі мүмкін.</p><p><strong>Атаулар көзі:</strong> каталогтағы қазақша нұсқалар — жұмыс тізімі. Басқа тілдегі атаулар Wikipedia-ның бір ұғымға байланысқан беттерінен алынады. Байланыс болмаған тілде қолданушы өзі балама енгізе алады. Тек дереккөзі көрсетілген жазба ғана ресми деп белгіленеді.</p><p><strong>Ұсыныс:</strong> ресми дерек бар болса, ол бөлек көрсетіледі; өзге жағдайда қазақша мәтін қорында көбірек кездесетін нұсқа белгіленеді. Аз не толық емес дерек тұжырымды шектейді. Wikipedia тілдік бөлімдері елдердің сөз қолданысының толық көрінісі емес.</p><p>Google іздеуіндегі миллиондаған «нәтиже» бұл жобаға нақты қолданылым ретінде енгізілмейді. Қосымша жинағыш қосылғанда олар бөлек «шамаланған веб нәтиже» ретінде көрсетіледі; кілт браузерге берілмейді.</p><div class="method-links"><a href="https://termincom.kz/industry/?id=28&tid=1" target="_blank" rel="noopener noreferrer">Ресми информатика терминдері ↗</a><a href="https://www.mediawiki.org/wiki/API:Search" target="_blank" rel="noopener noreferrer">MediaWiki Search API ↗</a><a href="https://www.mediawiki.org/wiki/API:Langlinks" target="_blank" rel="noopener noreferrer">Тіларалық байланыстар ↗</a></div></div></section>
+  </main>
+  <footer class="site-footer"><div class="shell footer-inner"><span>ТЕРМИНЗЕРТХАНАСЫ <span class="footer-sep">/</span> Ашық деректерге сүйенген зерттеу құралы</span><span>Деректер көзін және өлшемін әрқашан бірге қараңыз</span></div></footer>
+</body>
+</html>
